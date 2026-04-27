@@ -2,7 +2,7 @@ import os
 
 # Server Specific Configurations
 server = {
-    'port':  int(os.environ.get('PORT', 8080))
+    'port':  int(os.environ.get('PORT', 8080)),
     'host': '0.0.0.0'
 }
 
