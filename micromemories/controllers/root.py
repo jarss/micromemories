@@ -37,7 +37,10 @@ function renderPost(post) {
     var published = post['properties']['published'][0];
     published = new Date(published.slice(0,19).replace(' ', 'T'));
 
-    publishedEl.innerText = published.toDateString();
+    var yyyy = published.getFullYear();
+    var mm = String(published.getMonth() + 1).padStart(2, '0');
+    var dd = String(published.getDate()).padStart(2, '0');
+    publishedEl.innerText = yyyy + '-' + mm + '-' + dd;
     permalinkEl.appendChild(publishedEl);
 
     var contentEl = document.createElement('div');
