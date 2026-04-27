@@ -32,11 +32,10 @@ function renderPost(post) {
 
     var publishedEl = document.createElement('time');
     publishedEl.className = 'dt-published';
-    publishedEl.datetime = post['properties']['published'][0];
+    var rawDate = (post['properties']['published'] && post['properties']['published'][0]) || post['date_published'];
+    publishedEl.datetime = rawDate;
 
-    var published = post['properties']['published'][0];
-    published = new Date(published.slice(0,19).replace(' ', 'T'));
-
+    var published = new Date(rawDate.slice(0,19).replace(' ', 'T'));
     var yyyy = published.getFullYear();
     var mm = String(published.getMonth() + 1).padStart(2, '0');
     var dd = String(published.getDate()).padStart(2, '0');
