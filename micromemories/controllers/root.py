@@ -56,7 +56,7 @@ function renderNoContent() {
 
 var xhr = new XMLHttpRequest();
 xhr.responseType = "json";
-xhr.open('GET', "https://micromemories.cleverdevil.io/posts?tz=%(timezone)s", true);
+xhr.open('GET', "https://micromemories-2.onrender.com/posts?tz=%(timezone)s", true);
 xhr.send();
 
 xhr.onreadystatechange = function(e) {
