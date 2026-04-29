@@ -40,7 +40,7 @@ function renderPost(post) {
     var yyyy = published.getFullYear();
     var mm = String(published.getMonth() + 1).padStart(2, '0');
     var dd = String(published.getDate()).padStart(2, '0');
-    publishedEl.innerText = yyyy + '-' + mm + '-' + dd;
+    publishedEl.innerText = '■ ' + yyyy + '-' + mm + '-' + dd;
     permalinkEl.appendChild(publishedEl);
 
     var contentEl = document.createElement('div');
