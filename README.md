@@ -1,6 +1,14 @@
 Micro Memories
 ==============
 
+Note: I (JTR) forked and made changes to the code to fit my needs. Please note that most of the changes are in root.py, because my date format on *my* blog (www.taonaw.com) is a bit different, which is why I needed to come up with my own solution.
+
+I am still currently going back and retracing what was done and why. 
+
+Below, the original README continues from Jonathan LaCour:
+
+***
+
 Code used for creating an "On This Day" page for a Micro.blog hosted website.
 
 Currently used on [my wife's site](http://cleverangel.org/on-this-day).
