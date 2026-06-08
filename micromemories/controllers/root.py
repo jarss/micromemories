@@ -36,10 +36,10 @@ function renderPost(post) {
     publishedEl.datetime = rawDate;
 
     var cleanDate = rawDate.replace(/[^\x00-\x7F]/g, '').trim();
-    var published = new Date(cleanDate.slice(0,19).replace(' ', 'T'));
-    var yyyy = published.getFullYear();
-    var mm = String(published.getMonth() + 1).padStart(2, '0');
-    var dd = String(published.getDate()).padStart(2, '0');
+    var datePart = cleanDate.slice(0, 10);
+    var yyyy = datePart.slice(0, 4);
+    var mm = datePart.slice(5, 7);
+    var dd = datePart.slice(8, 10);
     publishedEl.innerText = '■ ' + yyyy + '-' + mm + '-' + dd;
     permalinkEl.appendChild(publishedEl);
 
